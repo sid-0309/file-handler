@@ -13,7 +13,7 @@ def rename(d, r, ext = ".jpg"):
         part=i.partition(".")
         for j in part[0]:
             if j.isdigit():name+=j
-        if len(name) < max: name = "0"*(max-len(name))+name
+        name = "0"*(max-len(name)) + name
         if r == "" or r == "n":
             name_map[f"{name}{part[1]}{part[2]}"] = i
             continue
